@@ -1,9 +1,9 @@
 package sk.spse.counter;
 
-public class Main {
+public class FxCounterMain {
 
     public static void main(final String[] args) {
-        FxCounter.main(args);
+        FxCounterApplication.start(args);
     }
 
 }

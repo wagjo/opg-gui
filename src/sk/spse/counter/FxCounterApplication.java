@@ -9,36 +9,27 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-public class FxCounter extends Application {
+public class FxCounterApplication extends Application {
 
     private int counter = 0;
 
-    @Override
     public void start(Stage stage) {
 
-        // Label
-        Label label = new Label("Counter:");
-        label.setStyle("-fx-font-size: 24px;");
+        Label label = new Label("Počítadlo:");
+        label.setStyle("-fx-font-size: 18px;");
 
-        // TextField
         TextField textField = new TextField("0");
-        textField.setEditable(false);
         textField.setPrefColumnCount(4);
-        textField.setStyle("""
-            -fx-font-size: 24px;
-            -fx-padding: 10 20 10 20;
-        """);
+        textField.setStyle("-fx-font-size: 18px;");
 
-        // Button
-        Button button = new Button("+");
-        button.setStyle("-fx-font-size: 24px;");
+        Button button = new Button("Plus 1");
+        button.setStyle("-fx-font-size: 18px;");
 
         button.setOnAction(e -> {
             counter++;
             textField.setText(String.valueOf(counter));
         });
 
-        // Layout: zľava doprava
         HBox root = new HBox(20, label, textField, button);
         root.setPadding(new Insets(20));
 
@@ -51,10 +42,6 @@ public class FxCounter extends Application {
 
     public static void start(String[] args) {
         launch(args);
-    }
-
-    public static void main(final String[] args) {
-        FxCounter.start(args);
     }
 
 }

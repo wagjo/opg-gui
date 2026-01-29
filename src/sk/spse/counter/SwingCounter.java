@@ -3,34 +3,28 @@ package sk.spse.counter;
 import javax.swing.*;
 import java.awt.*;
 
-public class SwingCounterSimple {
+public class SwingCounter {
 
     private int counter = 0;
 
-    public SwingCounterSimple() {
-        JFrame frame = new JFrame("Swing Counter Simple");
+    public SwingCounter() {
+        JFrame frame = new JFrame("Swing Counter");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT, 20, 20));
 
-        Font bigFont = new Font("SansSerif", Font.PLAIN, 48);
+        Font bigFont = new Font("SansSerif", Font.PLAIN, 36);
 
-        JLabel label = new JLabel("Counter:");
+        JLabel label = new JLabel("Počítadlo:");
         label.setFont(bigFont);
         panel.add(label);
 
         JTextField textField = new JTextField("0", 5);
         textField.setFont(bigFont);
-        textField.setEditable(false);
 
-        // padding textu v edit boxe
-        textField.setBorder(BorderFactory.createCompoundBorder(
-                textField.getBorder(),
-                BorderFactory.createEmptyBorder(10, 20, 10, 20)
-        ));
         panel.add(textField);
 
-        JButton button = new JButton("+");
+        JButton button = new JButton("Plus 1");
         button.setFont(bigFont);
         button.addActionListener(e -> {
             counter++;
@@ -39,13 +33,13 @@ public class SwingCounterSimple {
         panel.add(button);
 
         frame.setContentPane(panel);
-        frame.setSize(700, 180);
+        frame.setSize(560, 170);
         frame.setResizable(true);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(SwingCounterSimple::new);
+        SwingUtilities.invokeLater(SwingCounter::new);
     }
 }

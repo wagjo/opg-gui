@@ -3,12 +3,12 @@ package sk.spse.counter;
 import java.awt.*;
 import java.awt.event.*;
 
-public class AwtCounterSimple extends Frame {
+public class AwtCounter extends Frame {
 
     private int counter = 0;
     private TextField textField;
 
-    public AwtCounterSimple() {
+    public AwtCounter() {
         super("AWT Counter");
 
         setLayout(new FlowLayout(FlowLayout.LEFT, 20, 20)); // hgap, vgap
@@ -45,6 +45,6 @@ public class AwtCounterSimple extends Frame {
     }
 
     public static void main(String[] args) {
-        new AwtCounterSimple();
+        new AwtCounter();
     }
 }
