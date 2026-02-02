@@ -11,9 +11,9 @@ public class AwtCounter extends Frame {
     public AwtCounter() {
         super("AWT Counter");
 
-        setLayout(new FlowLayout(FlowLayout.LEFT, 20, 20)); // hgap, vgap
+        setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10)); // hgap, vgap
 
-        Font bigFont = new Font("SansSerif", Font.PLAIN, 36);
+        Font bigFont = new Font("SansSerif", Font.PLAIN, 16);
 
         Label label = new Label("Počítadlo:");
         label.setFont(bigFont);
@@ -31,7 +31,7 @@ public class AwtCounter extends Frame {
             textField.setText(String.valueOf(counter));
         });
 
-        setSize(500, 180);
+        setSize(280, 85);
         setResizable(true);
         setLocationRelativeTo(null);
 

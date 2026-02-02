@@ -11,9 +11,9 @@ public class SwingCounter {
         JFrame frame = new JFrame("Swing Counter");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT, 20, 20));
+        JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 10));
 
-        Font bigFont = new Font("SansSerif", Font.PLAIN, 36);
+        Font bigFont = new Font("SansSerif", Font.PLAIN, 16);
 
         JLabel label = new JLabel("Počítadlo:");
         label.setFont(bigFont);
@@ -33,7 +33,7 @@ public class SwingCounter {
         panel.add(button);
 
         frame.setContentPane(panel);
-        frame.setSize(560, 170);
+        frame.setSize(280, 90);
         frame.setResizable(true);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
