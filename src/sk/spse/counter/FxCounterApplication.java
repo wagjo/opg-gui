@@ -39,9 +39,4 @@ public class FxCounterApplication extends Application {
         stage.setResizable(true);
         stage.show();
     }
-
-    public static void start(String[] args) {
-        launch(args);
-    }
-
 }
