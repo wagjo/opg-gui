@@ -21,7 +21,7 @@ public class FxStageExampleApplication extends Application {
     @Override
     public void start(Stage primaryStage) {
         // Hlavne okno
-        primaryStage.setTitle("Hlavný Sage - DECORATED");
+        primaryStage.setTitle("Hlavný Stage - DECORATED");
         primaryStage.initStyle(StageStyle.DECORATED); // Predvolený štýl
 
         // Vytvorenie prvej scény
