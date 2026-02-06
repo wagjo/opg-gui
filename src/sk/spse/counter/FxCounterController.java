@@ -1,5 +1,6 @@
 package sk.spse.counter;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
@@ -23,5 +24,10 @@ public class FxCounterController {
     private void incrementCounter() {
         counter++;                           // zvýšime počítadlo
         counterField.setText(String.valueOf(counter));  // aktualizujeme zobrazenie
+    }
+
+    @FXML
+    private void closeCounter() {
+        Platform.exit();
     }
 }

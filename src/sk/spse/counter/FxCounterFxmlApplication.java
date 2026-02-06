@@ -25,8 +25,10 @@ public class FxCounterFxmlApplication extends Application {
         stage.setTitle("JavaFX FXML Counter");
         stage.setScene(scene);
         stage.setResizable(true);
+        stage.setMinWidth(325);
 
         // Zobrazíme okno
         stage.show();
+        stage.setMinHeight(165);
     }
 }
